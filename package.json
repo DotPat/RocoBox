@@ -9,6 +9,7 @@
   "author": "wle",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^11.1.1"
+    "electron": "^11.1.1",
+    "electron-builder": "^22.10.5"
   }
 }

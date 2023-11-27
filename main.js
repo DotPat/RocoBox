@@ -9,7 +9,7 @@ var mainWindow = null;
 var WIN_WIDTH = 960;
 var WIN_HEIGHT = 560;
 
-var wwwroot = 'https://17roco.qq.com/'
+var wwwroot = 'https://web2.17roco.qq.com/fcgi-bin/login2?platfrom_src=2'
 
 let pluginName="pepflashplayer32_20_0_0_286.dll";
 
