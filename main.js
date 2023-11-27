@@ -7,7 +7,7 @@ const path = require('path')
 var mainWindow = null;
 
 var WIN_WIDTH = 960;
-var WIN_HEIGHT = 560;
+var WIN_HEIGHT = 800;
 
 var wwwroot = 'https://web2.17roco.qq.com/fcgi-bin/login2?platfrom_src=2'
 
@@ -22,7 +22,6 @@ let plugins = path.join(__dirname, "plugins/" + pluginName);
 // }
 
 app.commandLine.appendSwitch('ppapi-flash-path', plugins)
-
 
 app.on('window-all-closed', function () {
     if (process.platform != 'darwin') {
@@ -55,7 +54,7 @@ app.on('ready', function () {
 
     Menu.setApplicationMenu(null);
     mainWindow.loadURL(wwwroot);
-    mainWindow.openDevTools();
+    // mainWindow.openDevTools();
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
