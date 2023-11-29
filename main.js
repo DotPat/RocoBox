@@ -22,7 +22,7 @@ let plugins = path.join(__dirname, "plugins/" + pluginName);
 // }
 
 app.commandLine.appendSwitch('ppapi-flash-path', plugins)
-
+// app.commandLine.appendSwitch('proxy-server', '127.0.0.1:12345');
 app.on('window-all-closed', function () {
     if (process.platform != 'darwin') {
         app.quit();
