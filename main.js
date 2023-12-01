@@ -9,8 +9,8 @@ var mainWindow = null;
 var WIN_WIDTH = 960;
 var WIN_HEIGHT = 800;
 
-var wwwroot = 'https://web2.17roco.qq.com/fcgi-bin/login2?platfrom_src=2'
-
+// var wwwroot = 'https://web2.17roco.qq.com/fcgi-bin/login2?platfrom_src=2'
+var wwwroot ="https://17roco.qq.com/login.html";
 let pluginName="pepflashplayer32_20_0_0_286.dll";
 
 
@@ -23,6 +23,7 @@ let plugins = path.join(__dirname, "plugins/" + pluginName);
 
 app.commandLine.appendSwitch('ppapi-flash-path', plugins)
 // app.commandLine.appendSwitch('proxy-server', '127.0.0.1:12345');
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 app.on('window-all-closed', function () {
     if (process.platform != 'darwin') {
         app.quit();
@@ -47,14 +48,16 @@ app.on('ready', function () {
         center: true,
         webPreferences: {
             plugins: true,
-			nativeWindowOpen:true
+			nativeWindowOpen:true,
+            webSecurity:false
         },
-        resizable: false
+        // resizable: false
     });
 
     Menu.setApplicationMenu(null);
-    mainWindow.loadURL(wwwroot);
-    // mainWindow.openDevTools();
+    // mainWindow.loadURL(wwwroot);
+    mainWindow.loadFile(path.join(__dirname, "resources/app/main.html"))
+    mainWindow.openDevTools();
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
