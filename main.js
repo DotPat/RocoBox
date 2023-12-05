@@ -10,7 +10,7 @@ var WIN_WIDTH = 960;
 var WIN_HEIGHT = 800;
 
 // var wwwroot = 'https://web2.17roco.qq.com/fcgi-bin/login2?platfrom_src=2'
-var wwwroot ="https://17roco.qq.com/login.html";
+var wwwroot = 'https://17roco.qq.com/'
 let pluginName="pepflashplayer32_20_0_0_286.dll";
 
 
@@ -55,8 +55,8 @@ app.on('ready', function () {
     });
 
     Menu.setApplicationMenu(null);
-    // mainWindow.loadURL(wwwroot);
-    mainWindow.loadFile(path.join(__dirname, "resources/app/main.html"))
+    mainWindow.loadURL(wwwroot);
+    // mainWindow.loadFile(path.join(__dirname, "resources/app/main.html"))
     mainWindow.openDevTools();
     mainWindow.on('closed', function () {
         mainWindow = null;
