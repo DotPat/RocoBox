@@ -4,8 +4,8 @@
   "description": "roco tools",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build":"electron-builder build   --ia32  --win"
+    "dev": "electron .",
+    "build": "electron-builder build   --ia32  --win"
   },
   "author": "wle",
   "license": "ISC",
